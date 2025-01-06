@@ -59,10 +59,9 @@ int main(void)
 		if(GPIO_ReadFromInputPin(GPIOI, GPIO_PIN_NO_11) == BTN_PRESSED)
 		{
 			delay(150);
-
 			interval_index +=1;
-            if(interval_index == 0)
-            	delay_time = BLINK_1SEC;
+            		if(interval_index == 0)
+            			delay_time = BLINK_1SEC;
 			else if(interval_index == 1)
 			    delay_time = BLINK_4SEC;
 			else if(interval_index == 2)
@@ -72,7 +71,6 @@ int main(void)
 		}
 		GPIO_ToggleOutputPin(GPIOI, GPIO_PIN_NO_1);
 		delay(delay_time);
-
 
 	}
 }
